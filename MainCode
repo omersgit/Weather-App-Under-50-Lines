@@ -5,8 +5,8 @@ import Weatherkit
 struct ContentView: View{
     static let location =
     CLLocation(
-        latitude:.init(float Literal:33.684422),
-        longitude:.init(float Literal:73.047882)
+        latitude:.init(float Literal:40.7128),
+        longitude:.init(float Literal:74.0060)
     )
 
     @State var weather:Weather?
