@@ -1,0 +1,50 @@
+import SwiftUI
+import CoreLocation
+import Weatherkit
+
+struct ContentView: View{
+    static let location =
+    CLLocation(
+        latitude:.init(float Literal:33.684422),
+        longitude:.init(float Literal:73.047882)
+    )
+
+    @State var weather:Weather?
+
+    func getWeather()async{
+        do {
+            weather= try await Task
+                 {
+                 try await weatherService.shared.weather(for:
+                     Self.location)
+                 }.value
+            } catch {
+            fatalError("\(error)")
+            }
+    var body:some View{
+        if let weather weather {
+            VStack{
+                 Text("New York").font(.largeTitle).padding()
+                     .foregroundColor(.blue)
+                 Text(weather.currentWeather.temperature
+                     .description)
+                     .font(.system(size:60))
+                 Text(weather.currentWeather.condition
+                     .description).font(.title)
+                 Image(systemName:
+                     weather.currentWeather.symbolName).font(
+                     .title)
+            }
+                 }
+                    }|
+                  }
+              }else{
+                  }
+                 }
+           ProgressView()
+              .task{
+              }
+struct ContentView_Previews:PreviewProvider{
+   static var previews:some View{
+       ContentView()
+                  await getWeather()
