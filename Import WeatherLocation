@@ -1,0 +1,6 @@
+struct ContentView: View{
+    static let location =
+    CLLocation(
+        latitude:.init(float Literal:40.7128),
+        longitude:.init(float Literal:74.0060)
+    )
