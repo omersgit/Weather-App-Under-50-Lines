@@ -3,10 +3,10 @@ Created a weather app under 50 lines of code using JS (XCode)
 
 How to use the project:
 
-Clone
+• Clone
 
-Install dependencies 
+• Install dependencies 
 
-Get your API key and add to weatherService.js
+• Get your API key and add to weatherService.js
 
-Enjoy!!
+• Enjoy!!
